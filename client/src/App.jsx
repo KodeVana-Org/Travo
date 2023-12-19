@@ -9,6 +9,9 @@ import Destinations from './pages/Destinations.jsx';
 import Contact from './pages/Contact_us.jsx'
 import Tour from './pages/Tour.jsx';
 import { Payment } from './pages/Payment.jsx';
+import Login from './pages/Login.jsx'
+import Register from './pages/Register.jsx'
+
 
 function App() {
 
@@ -17,6 +20,8 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/about" element={<About />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/tours" element={<Tours />} />
