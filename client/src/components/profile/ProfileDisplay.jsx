@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import axios from 'axios';
+const token = localStorage.getItem(token);
 
 const ProfileDisplay = () => {
   const [userDetails, setUserDetails] = useState(null);
   const [purchaseDetails, setPurchaseDetails] = useState(null);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
