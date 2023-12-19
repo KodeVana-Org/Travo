@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 8000;
 require('dotenv').config();
-// const mongoose = require('mongoose')
 const connectToDB = require('../src/config/database')
 const PlaceRouter = require('../src/router/productRoute')
 const login = require('../src/router/login')
 const signup = require('../src/router/signup')
 const getProfile = require('../src/router/getProfile');
+const addProfile = require('../src/router/addProfile')
 const verifyToken = require('../src/middleware/verifyToken')
 const cors = require('cors');
 
@@ -32,6 +32,7 @@ someFunction();
 app.use('/api',login);
 app.use('/api',signup);
 app.use('/api', verifyToken, getProfile);
+app.use('/api', verifyToken, addProfile);
 app.use('/api', PlaceRouter); 
 
 app.listen(process.env.PORT, (req, res) => {
