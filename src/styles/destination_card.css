@@ -1,0 +1,14 @@
+:root {
+  --transition-2: 0.2s ease;
+}
+
+.destination-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(hsla(222, 46%, 17%, 0), hsla(222, 46%, 17%, 0.7));
+}
+
+.destination-card-image { transition: var(--transition-2); }
+
+.destination-card:is(:hover, :focus) .destination-card-image { transform: scale(1.1); }

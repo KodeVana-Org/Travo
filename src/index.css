@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ff-abril-fatface: 'Abril Fatface', cursive;
+  --ff-comforter-brush: 'Comforter Brush', cursive;
+  --ff-heebo: 'Heebo', sans-serif;
+  --transition-2: 0.35s ease;
+}
+
+body {
+  font-family: var(--ff-heebo);
+}
+
+h1 {
+  font-family: var(--ff-abril-fatface);
+}
+
+h3 {
+  font-family: var(--ff-comforter-brush);
+}

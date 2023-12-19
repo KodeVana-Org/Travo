@@ -1,0 +1,17 @@
+.toursContainer {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  overflow-y: hidden; /* Hide vertical scrollbar if any */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.toursContainer::-webkit-scrollbar {
+  display: none; /* WebKit browsers */
+}
+
+.tourCard {
+  box-sizing: border-box;
+  /* flex: 0 0 calc((100% - (7px * (10 - 1))) / 10); */
+}
