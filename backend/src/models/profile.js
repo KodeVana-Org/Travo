@@ -14,10 +14,12 @@ const ProfileScema = new mongoose.Schema({
     },
     address: {
         type : String,
-    }
+    },
+    otherDetails: 
+    { type: mongoose.Schema.Types.Mixed} 
 
 })
 
-const Profile = mongoose.model('Profile', ProfileScema);
+const UserDetail = mongoose.model('UserDetail', ProfileScema);
 
-module.exports = Profile;
+module.exports = UserDetail;

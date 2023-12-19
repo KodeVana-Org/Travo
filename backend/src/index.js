@@ -7,7 +7,7 @@ const connectToDB = require('../src/config/database')
 const PlaceRouter = require('../src/router/productRoute')
 const login = require('../src/router/login')
 const signup = require('../src/router/signup')
-const profileRoute = require('../src/router/profileRoute');
+const getProfile = require('../src/router/getProfile');
 const verifyToken = require('../src/middleware/verifyToken')
 const cors = require('cors');
 
@@ -29,10 +29,10 @@ someFunction();
 //   res.send('hellow world')
 // })
 
-app.use('/api', PlaceRouter); 
 app.use('/api',login);
 app.use('/api',signup);
-app.use('/api', verifyToken, profileRoute)
+app.use('/api', verifyToken, getProfile);
+app.use('/api', PlaceRouter); 
 
 app.listen(process.env.PORT, (req, res) => {
   console.log(`Server is running on port ${process.env.PORT}`)

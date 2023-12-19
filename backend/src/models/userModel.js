@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema({
     userDetails: [
         {
           type: mongoose.Schema.Types.ObjectId,
-          ref: 'Profile' 
+          ref: 'UserDetail' 
         }
       ],
     purchasedPlaces: [

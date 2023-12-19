@@ -7,7 +7,6 @@ const productSchema = new Schema({
     type:[String],
     cardNumber: Number,
     currency: String,
-    id : Number,
     cvc: Number,
     date: String,
     cardHolderName: String,

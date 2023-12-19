@@ -2,6 +2,8 @@ const UserModel = require('../models/userModel')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const router = require('./productRoute')
+require('dotenv').config();
+const SECRET_KEY = process.env.SECRET_KEY
 
 
 router.post('/signup', async (req, res) => {
@@ -33,7 +35,7 @@ router.post('/signup', async (req, res) => {
                 number: userCount + 1
             })
 
-            const token = jwt.sign({ email: result.email, id: result._id }, process.env.SECRET_KEY);
+            const token = jwt.sign({ email: result.email, id: result._id }, SECRET_KEY);
             return res.status(200).json({
                 success: true,
                 message:"user created successfully",
