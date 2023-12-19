@@ -7,7 +7,7 @@ const UserDetail = require('../models/profile');
 const updateUserDetails = require('../middleware/addDetais')
 
 
-router.post('/profiles', async (req, res) => {
+router.post('/profile', async (req, res) => {
     try {
       const userId = req.user.id; // Assuming user ID is available in req.user object
       const userDetailsData = {
