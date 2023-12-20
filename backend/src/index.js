@@ -9,6 +9,8 @@ const signup = require('../src/router/signup')
 const getProfile = require('../src/router/getProfile');
 const addProfile = require('../src/router/addProfile')
 const verifyToken = require('../src/middleware/verifyToken')
+const me = require('../src/router/getMe')
+const purchasePlaces = require('./router/purchasePlace')
 const cors = require('cors');
 
 app.use(express.json());
@@ -31,9 +33,13 @@ someFunction();
 
 app.use('/api',login);
 app.use('/api',signup);
-app.use('/api', verifyToken, getProfile);
-app.use('/api', verifyToken, addProfile);
+app.use('/api',me);
+// app.use('/api', verifyToken, getProfile);
+// app.use('/api', verifyToken, addProfile);
+app.use('/api',getProfile);
+app.use('/api',addProfile);
 app.use('/api', PlaceRouter); 
+app.use('/api',purchasePlaces);
 
 app.listen(process.env.PORT, (req, res) => {
   console.log(`=> Server is running on port 🌸 << ${process.env.PORT} >> 🌸`)

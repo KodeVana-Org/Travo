@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import FormComponent from './ProfileUpdate'; // Replace this with your form component
+import FormComponent from './AddProfile'; // Replace this with your form component
 
 const ProfileEdit = () => {
   const [isEditing, setIsEditing] = useState(false);
@@ -13,7 +13,7 @@ const ProfileEdit = () => {
   };
 
   return (
-    <div>
+    <div className='text-center text-xl'>
       {!isEditing ? (
         <div>
           {/* Display user details */}

@@ -1,37 +1,35 @@
 import  { useState } from 'react';
 import axios from 'axios';
-const ProfileUpdate = () => {
+const AddProfile = () => {
   const [image, setImage] = useState('');
   const [address, setAddress] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [other, setOther] = useState('');
 
   const handleSubmit = async (e) => {
-    const token = localStorage.getItem(token);
     e.preventDefault();
     try {
-      const userDetailsData = {
+      let userDetailsData = {
         image,
         address,
         phoneNumber,
         other,
       };
-
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-      let response;
-
-      // If there is an image, it's a POST request, otherwise, it's a PUT request
-      if (image) {
-        response = await axios.post('/profile', userDetailsData);
-      } else {
-        response = await axios.put('/profile', userDetailsData);
-      }
-
-      console.log(response.data);
-      // Handle success or update UI
+  
+      const token = localStorage.getItem('token');
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
+  
+      const response = await axios.post('http://localhost:6969/api/profile', userDetailsData, config);
+      console.log('Data saved successfully:', response.data);
+      alert("data post successfully")
+      // Handle any success messages or state updates as needed
     } catch (error) {
-      console.error('Error updating profile:', error);
-      // Handle error or show error message
+      console.error('Error saving data:', error);
+      // Handle error messages or actions in case of a failed request
     }
   };
 
@@ -52,7 +50,7 @@ const ProfileUpdate = () => {
         className="block w-full border rounded-md px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
       <input
-        type="text"
+        type="number"
         placeholder="Phone Number"
         value={phoneNumber}
         onChange={(e) => setPhoneNumber(e.target.value)}
@@ -76,4 +74,4 @@ const ProfileUpdate = () => {
 };
 
 
-export default ProfileUpdate;
+export default AddProfile;

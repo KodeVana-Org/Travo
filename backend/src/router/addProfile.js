@@ -4,10 +4,11 @@ const router = express.Router();
 const User = require('../models/userModel'); 
 const ProductDetails = require('../models/product')
 const UserDetail = require('../models/profile');
-const updateUserDetails = require('../middleware/addDetais')
+const updateUserDetails = require('../middleware/addDetais');
+const verifyToken = require('../middleware/verifyToken');
 
 
-router.post('/profile', async (req, res) => {
+router.post('/profile',verifyToken, async (req, res) => {
     try {
       const userId = req.user.id; // Assuming user ID is available in req.user object
       const userDetailsData = {

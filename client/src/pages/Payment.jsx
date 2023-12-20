@@ -1,6 +1,6 @@
 import { useState} from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import toursData from '../components/home/tours/data';
 // import './styles.css'; // Import your generated Tailwind CSS file
 
@@ -36,10 +36,17 @@ export const Payment = () => {
   //seding code to backend
       try {
         console.log(paymentDetails)
-        const response = await axios.post('http://localhost:6969/api/payment-get', paymentDetails);
+        const token = localStorage.getItem('token');
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
+        const response = await axios.post('http://localhost:6969/api/payment-get', paymentDetails, config);
 
         if (response.status === 200) {
           setPaymentSuccess(true);
+         
         } else {
           throw new Error('Failed to save payment details');
         }
@@ -151,7 +158,13 @@ export const Payment = () => {
               <h2 className="text-3xl font-semibold text-green-600 mb-4">
                 Payment Successful!
               </h2>
-              <p className="text-gray-700">Thank you for your payment.</p>
+              <p className="text-gray-700 mb-5">Thank you for your payment.</p>
+              <Link
+        to="/"
+        className="bg-blue-500 mt-5 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-md shadow-md transition duration-300"
+      >
+        Go to Home
+      </Link>
             </div>
           )}
         </div>

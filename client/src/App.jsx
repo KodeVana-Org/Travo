@@ -74,13 +74,3 @@ function App() {
 }
 
 export default App
-
-
-{/* <Route
-          path="/me"
-          element={loggedIn ? <Profile /> : <Navigate to="/" />}
-        />
-        <Route
-          path="/payment/:id"
-          element={loggedIn ? <Payment /> : <Navigate to="/" />}
-        /> */}
