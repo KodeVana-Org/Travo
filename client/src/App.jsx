@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import './App.css'
 
 
@@ -14,16 +15,23 @@ import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
 import Profile from './components/profile/profile.jsx'; // Ensure this is the correct path
 import { Payment } from './pages/Payment.jsx';
-import PrivateComponents from './components/profile/privateRoute.jsx';
+// import PrivateComponents from './components/profile/privateRoute.jsx';
 import NotFound from './pages/PageNotFound.jsx';
+
+
+const isAuthenticated = () => {
+  const token = localStorage.getItem('token');
+  return !!token; // Convert to boolean
+};
 
 function App() {
 
-  const isAuthenticated = () => {
-    const token = localStorage.getItem('token');
-    return token !== null;
-  };
-  // const redirectToRoot = () => <Navigate to="/" />;
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    setLoggedIn(isAuthenticated());
+  }, []);
+
   return (
     <Router>
       <Routes>
@@ -38,27 +46,25 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/tour/:id" element={<Tour />} />
 
+          {/* Render these routes if logged in */}
+          {loggedIn ? (
+          <>
+            <Route path="/me" element={<Profile />} />
+            <Route path="/payment/:id" element={<Payment />} />
+          </>
+        ) : (
+          <Route path="/me" element={<Navigate to="/" />} />
+        )}
+
+        {/* Login and Register routes */}
         <Route
           path="/login"
-          element={isAuthenticated() ? <Navigate to="/" replace /> : <Login />}
+          element={loggedIn ? <Navigate to="/" /> : <Login />}
         />
         <Route
           path="/register"
-          element={isAuthenticated() ? <Navigate to="/" replace /> : <Register />}
+          element={loggedIn ? <Navigate to="/" /> : <Register />}
         />
-
-        <Route
-          path="/me"
-          element={<PrivateComponents />}
-        >
-          <Route index element={<Profile />} />
-        </Route>
-        <Route
-          path="/payment/:id"
-          element={<PrivateComponents />}
-        >
-          <Route index element={<Payment />} />
-        </Route>
 
         <Route path="*" element={<NotFound />} />
 
@@ -68,3 +74,13 @@ function App() {
 }
 
 export default App
+
+
+{/* <Route
+          path="/me"
+          element={loggedIn ? <Profile /> : <Navigate to="/" />}
+        />
+        <Route
+          path="/payment/:id"
+          element={loggedIn ? <Payment /> : <Navigate to="/" />}
+        /> */}

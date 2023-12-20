@@ -28,7 +28,10 @@ router.post('/login', async (req, res) => {
         const decodedToken = jwt.verify(token, process.env.SECRET_KEY);
         const user = decodedToken
         // Accessing email and id from the decoded token
-        res.status(200).json({ token, user });
+        res.status(200).json({
+             data: token, 
+             user 
+            });
         console.log(user.email, user.id, user.number)
 
 

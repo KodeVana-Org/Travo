@@ -1,11 +1,15 @@
+import LogoutButton from "./Logout"
 import ProfileDisplay from "./ProfileDisplay"
-import ProfileUpdate from "./ProfileUpdate"
+import ProfileEdit from "./editProfileUpdate"
 
 function profile() {
   return (
     <div>
         <ProfileDisplay />
-        <ProfileUpdate />
+
+        {/* <ProfileUpdate /> */}
+        <ProfileEdit/>
+        <LogoutButton />
     </div>
   )
 }

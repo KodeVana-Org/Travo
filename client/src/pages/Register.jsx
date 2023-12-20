@@ -34,6 +34,7 @@ export default function Register() {
         const token = response.data.data;
         console.log(token);
         localStorage.setItem('token', token);
+        window.location.reload();
         navigate('/');
       } else {
         console.log("see the response", response);

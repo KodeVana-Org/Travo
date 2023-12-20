@@ -26,11 +26,18 @@ export default function LoginForm() {
     try {
 
       const response = await axios.post('http://localhost:6969/api/login', { email, password })
-      if (response.data) {
-        navigate('/')
-        console.log("Logged in Successfully!")
+      const responses = await response.data;
+      console.log(responses)
+      if (responses) {
+        const token = response.data.data;
+        console.log(token);
+        localStorage.setItem('token', token);
+         window.location.reload();
+        navigate('/');
+      } else {
+        console.log("see the response", response);
+        alert("Invalid credentials")
       }
-
     } catch (error) {
       console.log(error)
     }

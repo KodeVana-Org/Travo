@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react';
 
 export default function NavBar() {
+
+  const [loggedIn, setLoggedIn] = useState(!!localStorage.getItem('token'));
+  
+
   return (
     <nav className="px-96 h-24 text-white text-center items-center flex justify-between bg-[#029D9D]">
       <span className="text-4xl font-abrill-fatface font-extrabold">
@@ -69,7 +74,21 @@ export default function NavBar() {
           </li>
         </Link>
       </ul>
-      <Link className="px-8 py-2 font-bold text-[#029D9D] hover:text-white bg-white border-2 border-white hover:bg-[#029D9D] rounded-md transition-all duration-200" to={'/login'}>Sign In</Link>
+      {/* <Link className="px-8 py-2 font-bold text-[#029D9D] hover:text-white bg-white border-2 border-white hover:bg-[#029D9D] rounded-md transition-all duration-200" to={'/login'}>Sign In</Link> */}
+      {loggedIn ? (
+        <Link to='/me'
+          className="text-center py-2 items-center px-4 font-bold text-[#029D9D] text-lg hover:text-white bg-white border-2 border-white hover:bg-[#029D9D] rounded-md transition-all duration-200"
+        >
+          Me
+        </Link>
+      ) : (
+        <Link
+          className="px-8 py-2 font-bold text-[#029D9D] hover:text-white bg-white border-2 border-white hover:bg-[#029D9D] rounded-md transition-all duration-200"
+          to={'/login'}
+        >
+          Sign In
+        </Link>
+      )}
     </nav>
   )
 }
