@@ -1,6 +1,6 @@
 import  { useEffect, useState } from 'react';
 import axios from 'axios';
-const token = localStorage.getItem(token);
+
 
 const ProfileDisplay = () => {
   const [userDetails, setUserDetails] = useState(null);
@@ -8,6 +8,7 @@ const ProfileDisplay = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const token = localStorage.getItem(token);
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         const response = await axios.get('/profile');
         setUserDetails(response.data.userDetails);

@@ -1,6 +1,5 @@
 import  { useState } from 'react';
 import axios from 'axios';
-const token = localStorage.getItem(token);
 const ProfileUpdate = () => {
   const [image, setImage] = useState('');
   const [address, setAddress] = useState('');
@@ -8,6 +7,7 @@ const ProfileUpdate = () => {
   const [other, setOther] = useState('');
 
   const handleSubmit = async (e) => {
+    const token = localStorage.getItem(token);
     e.preventDefault();
     try {
       const userDetailsData = {

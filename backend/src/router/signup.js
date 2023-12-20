@@ -6,7 +6,7 @@ require('dotenv').config();
 const SECRET_KEY = process.env.SECRET_KEY
 
 
-router.post('/signup', async (req, res) => {
+router.post('/register', async (req, res) => {
 
     const { name, email, password } = req.body;
     try {
