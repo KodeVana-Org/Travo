@@ -53,7 +53,7 @@ export default function LoginForm() {
                 type="email"
                 placeholder="Email address"
                 size="lg"
-                className="mb-6 px-4 py-2 w-full border-2 rounded-md"
+                className="mb-6 px-4 py-2 w-full border-2 border-[#029D9D] rounded-md"
                 onChange={(e) => setEmail(e.target.value)}
               />
 
@@ -63,7 +63,7 @@ export default function LoginForm() {
                   type={showPassword ? 'text' : 'password'}
                   placeholder="Password"
                   autoComplete="off"
-                  className="mb-6 px-4 py-2 h-fit w-full border-2 rounded-md"
+                  className="mb-6 px-4 py-2 h-fit w-full border-2 border-[#029D9D] rounded-md"
                   onChange={(e) => setPassword(e.target.value)}
                   size="lg"
                 />
@@ -113,7 +113,7 @@ export default function LoginForm() {
 
                 <button onClick={submitForm}
                   type="submit"
-                  className="w-full rounded-md py-2 text-lg font-semibold text-[#029D9D] hover:text-white border-2 border-[#029D9D] transition-all duration-200 hover:bg-[#029D9D] outline-none"
+                  className="w-full rounded-md py-2 text-lg font-semibold text-white transition-all duration-200 bg-[#029D9D] hover:bg-[#34c8c8] outline-none"
                 >
                   Login
                 </button>
