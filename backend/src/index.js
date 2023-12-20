@@ -36,5 +36,5 @@ app.use('/api', verifyToken, addProfile);
 app.use('/api', PlaceRouter); 
 
 app.listen(process.env.PORT, (req, res) => {
-  console.log(`Server is running on port ${process.env.PORT}`)
+  console.log(`=> Server is running on port 🌸 << ${process.env.PORT} >> 🌸`)
 })
