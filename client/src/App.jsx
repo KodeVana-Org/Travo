@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css'
 
 
@@ -19,19 +19,18 @@ import NotFound from './pages/PageNotFound.jsx';
 
 function App() {
 
-   const isAuthenticated = () => {
+  const isAuthenticated = () => {
     const token = localStorage.getItem('token');
-    return token !== null; 
-};
-// const redirectToRoot = () => <Navigate to="/" />;
+    return token !== null;
+  };
+  // const redirectToRoot = () => <Navigate to="/" />;
   return (
     <Router>
       <Routes>
 
         {/* public routes */}
         <Route path="/" element={<Home />} />
-        {/* <Route path="/login" element={<Login />} /> */}
-        {/* <Route path="/register" element={<Register />} /> */}
+
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/tours" element={<Tours />} />
@@ -39,44 +38,32 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/tour/:id" element={<Tour />} />
 
-        {/* if token then blog register and login  */}
-        {/* {!isAuthenticated && (
-                    <>
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/register" element={<Register />} />
-                    </>
-                )} */}
-                  <Route
-                    path="/login"
-                    element={isAuthenticated() ? <Navigate to="/" replace /> : <Login />}
-                />
-                <Route
-                    path="/register"
-                    element={isAuthenticated() ? <Navigate to="/" replace /> : <Register />}
-                />
-
-       
+        <Route
+          path="/login"
+          element={isAuthenticated() ? <Navigate to="/" replace /> : <Login />}
+        />
+        <Route
+          path="/register"
+          element={isAuthenticated() ? <Navigate to="/" replace /> : <Register />}
+        />
 
         <Route
-                    path="/me"
-                    element={<PrivateComponents />}
-                >
-                    <Route index element={<Profile />} />
-                </Route>
-                <Route
-                    path="/payment/:id"
-                    element={<PrivateComponents />}
-                >
-                    <Route index element={<Payment/>} />
-                </Route>
+          path="/me"
+          element={<PrivateComponents />}
+        >
+          <Route index element={<Profile />} />
+        </Route>
+        <Route
+          path="/payment/:id"
+          element={<PrivateComponents />}
+        >
+          <Route index element={<Payment />} />
+        </Route>
 
-                <Route path="*" element={<NotFound />} />
-
+        <Route path="*" element={<NotFound />} />
 
       </Routes>
     </Router>
-      
-    
   );
 }
 
