@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TERipple } from "tw-elements-react";
 import { useNavigate, Link } from "react-router-dom";
 import logoSvg from "../assets/draw2.svg"
@@ -11,6 +11,14 @@ export default function LoginForm() {
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+
+
+  useEffect(() => {
+    const auth = localStorage.getItem('token')
+    if (auth) {
+      navigate("/")
+    }
+  })
 
   const submitForm = async (e) => {
     console.log("Hello", email, password)

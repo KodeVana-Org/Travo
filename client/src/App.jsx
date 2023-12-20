@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
 import './App.css'
 
 
@@ -15,26 +15,48 @@ import Register from './pages/Register.jsx';
 import Profile from './components/profile/profile.jsx'; // Ensure this is the correct path
 import { Payment } from './pages/Payment.jsx';
 import PrivateComponents from './components/profile/privateRoute.jsx';
+import NotFound from './pages/PageNotFound.jsx';
 
 function App() {
+
+   const isAuthenticated = () => {
+    const token = localStorage.getItem('token');
+    return token !== null; 
+};
+// const redirectToRoot = () => <Navigate to="/" />;
   return (
     <Router>
       <Routes>
 
         {/* public routes */}
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        {/* <Route path="/me" element={<PrivateRouteWrapper element={<Profile />} />} /> */}
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/register" element={<Register />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/tours" element={<Tours />} />
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/tour/:id" element={<Tour />} />
-        {/* <Route path="/payment/:id" element={<PrivateRouteWrapper element={<Payment />} />} /> */}
 
-        {/* Private Routes */}
+        {/* if token then blog register and login  */}
+        {/* {!isAuthenticated && (
+                    <>
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                    </>
+                )} */}
+                  <Route
+                    path="/login"
+                    element={isAuthenticated() ? <Navigate to="/" replace /> : <Login />}
+                />
+                <Route
+                    path="/register"
+                    element={isAuthenticated() ? <Navigate to="/" replace /> : <Register />}
+                />
+
+       
+
         <Route
                     path="/me"
                     element={<PrivateComponents />}
@@ -47,6 +69,8 @@ function App() {
                 >
                     <Route index element={<Payment/>} />
                 </Route>
+
+                <Route path="*" element={<NotFound />} />
 
 
       </Routes>
