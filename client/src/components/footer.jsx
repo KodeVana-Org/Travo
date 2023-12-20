@@ -107,7 +107,7 @@ export default function Footer() {
         <div className="flex items-center justify-between">
           <Link to={'/'} className="text-4xl font-extrabold">Tourest</Link>
           <p>
-            &copy; 2023 <Link to={''}>travo</Link>. All Rights Reserved
+            &copy; 2023 <Link to={'https://kodevana.com'}>KodeVana</Link>. All Rights Reserved
           </p>
           <ul className="flex gap-2">
             <li>

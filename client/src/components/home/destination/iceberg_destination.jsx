@@ -15,7 +15,7 @@ export default function Iceberg() {
     <div className='text-center relative'>
       <div className='mt-16 grid grid-cols-2 gap-7 justify-between'>
         <div className='grid grid-rows-2 gap-7'>
-          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destination/bangkok'}>
+          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
               src={destination_1}
@@ -26,7 +26,7 @@ export default function Iceberg() {
               <h2 className='text-3xl font-bold text-white'>Greenland</h2>
             </span>
           </Link>
-          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destination/bangkok'}>
+          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
               src={destination_2}
@@ -38,7 +38,7 @@ export default function Iceberg() {
             </span>
           </Link>
         </div>
-        <Link className='relative overflow-hidden destination-card rounded-md' to={'/destination/male'}>
+        <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
           <Img
             className='h-full w-full destination-card-image'
             src={destination_3}
@@ -49,7 +49,7 @@ export default function Iceberg() {
             <h2 className='text-3xl font-bold text-white'>Iceland</h2>
           </span>
         </Link>
-        <Link className='relative overflow-hidden destination-card rounded-md' to={'/destination/male'}>
+        <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
           <Img
             className='h-full w-full destination-card-image'
             src={destination_4}
@@ -61,7 +61,7 @@ export default function Iceberg() {
           </span>
         </Link>
         <div className='grid grid-rows-2 gap-7'>
-          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destination/bangkok'}>
+          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
               src={destination_5}
@@ -72,7 +72,7 @@ export default function Iceberg() {
               <h2 className='text-3xl font-bold text-white'>England</h2>
             </span>
           </Link>
-          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destination/bangkok'}>
+          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
               src={destination_6}

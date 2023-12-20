@@ -6,7 +6,9 @@ function Contact_us() {
   return (
     <div>
       <NavBar></NavBar>
-      <Contact></Contact>
+      <div className="mx-96">
+        <Contact></Contact>
+      </div>
       <Footer></Footer>
     </div>
   )
