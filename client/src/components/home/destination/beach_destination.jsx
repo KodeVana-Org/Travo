@@ -15,7 +15,7 @@ export default function Beach() {
   return (
     <div className='text-center relative'>
         <div className='mt-16 grid grid-cols-2 gap-7 justify-between'>
-          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destination/male'}>
+          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
               src={destination_1}
@@ -26,7 +26,7 @@ export default function Beach() {
               <h2 className='text-3xl font-bold text-white'>Maldives</h2>
             </span>
           </Link>
-          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destination/bangkok'}>
+          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
               src={destination_2}
@@ -39,7 +39,7 @@ export default function Beach() {
           </Link>
         </div>
         <div className='mt-7 grid grid-cols-3 gap-7 justify-between'>
-          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destination/kuala_lumpur'}>
+          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
               src={destination_3}
@@ -50,7 +50,7 @@ export default function Beach() {
               <h2 className='text-3xl font-bold text-white'>Malaysia</h2>
             </span>
           </Link>
-          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destination/kathmandu'}>
+          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
               src={destination_4}
@@ -61,7 +61,7 @@ export default function Beach() {
               <h2 className='text-3xl font-bold text-white'>Nepal</h2>
             </span>
           </Link>
-          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destination/goa'}>
+          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
               src={destination_5}
@@ -74,7 +74,7 @@ export default function Beach() {
           </Link>
         </div>
         <div className='mt-7 grid grid-cols-2 gap-7 justify-between'>
-          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destination/male'}>
+          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
               src={destination_6}
@@ -85,7 +85,7 @@ export default function Beach() {
               <h2 className='text-3xl font-bold text-white'>Islands</h2>
             </span>
           </Link>
-          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destination/bangkok'}>
+          <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
               src={destination_7}
