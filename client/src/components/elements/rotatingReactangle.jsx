@@ -2,7 +2,7 @@ import { Img } from 'react-image';
 
 import '../../styles/rotateImage.css'
 
-import Reactangle from '../../assets/shape-1.png'
+import Reactangle from '../../assets/images/shape-1.png'
 
 export default function RotatingReactangle() {
   return (

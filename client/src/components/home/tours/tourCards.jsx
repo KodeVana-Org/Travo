@@ -3,28 +3,30 @@ import { Link } from 'react-router-dom'
 
 import '../../../styles/hideScrollbar.css'
 
+import TourData from '../../../assets/js/data_tours.js'
+
 import Clock from '../../../assets/icons/clock-9.png'
 import Check from '../../../assets/icons/check.png'
 import New from '../../../assets/icons/badge-plus.png'
 
-import Tour_1 from '../../../assets/tour-1.jpg'
-import Tour_2 from '../../../assets/tour-4.jpg'
-import Tour_3 from '../../../assets/tour-10.jpg'
-
 export default function TourCards() {
+  const Tour1 = TourData[0];
+  const Tour2 = TourData[3];
+  const Tour3 = TourData[9];
+  
   return (
     <div className="mt-16 flex gap-7">
       <Link className='h-full rounded-md shadow-inner shadow-gray-300' to={'./'}>
         <Img
           className='w-96 h-64 rounded-t-md'
-          src={Tour_1}
+          src={Tour1.image}
           alt=''
         />
         <div className='p-5'>
           <h4 className='text-lg font-semibold'>Mountain Hiking Tour</h4>
-          <p className='text-base opacity-60'>2 weeks group tour</p>
+          <p className='text-base opacity-60'>{Tour1.duration}</p>
           <p className='mt-3'>From</p>
-          <h2 className='text-2xl font-bold'>$895.00</h2>
+          <h2 className='text-2xl font-bold'>${Tour1.price}.00</h2>
           <p className='mt-3'>*Price varies</p>
           <span className='flex gap-2'>
             <Img
@@ -32,7 +34,7 @@ export default function TourCards() {
               src={Clock}
               alt=''
             />
-            <p>7 Days to go</p>
+            <p>{Tour1.daysToGo}</p>
           </span>
           <div className='flex justify-between'>
             <span className='flex gap-2'>
@@ -41,7 +43,7 @@ export default function TourCards() {
                 src={Check}
                 alt=''
               />
-              <p>Free cencelation</p>
+              <p>Free cencellation</p>
             </span>
             <span className='flex gap-2'>
               <Img
@@ -49,7 +51,7 @@ export default function TourCards() {
                 src={New}
                 alt=''
               />
-              <p>New on Travo</p>
+              <p>{Tour1.isNew}</p>
             </span>
           </div>
         </div>
@@ -57,14 +59,14 @@ export default function TourCards() {
       <Link className='h-full rounded-md shadow-inner shadow-gray-300' to={'./'}>
         <Img
           className='w-96 h-64 rounded-t-md'
-          src={Tour_2}
+          src={Tour2.image}
           alt=''
         />
         <div className='p-5'>
           <h4 className='text-lg font-semibold'>Water Lack</h4>
-          <p className='text-base opacity-60'>1 week group tour</p>
+          <p className='text-base opacity-60'>{Tour2.duration}</p>
           <p className='mt-3'>From</p>
-          <h2 className='text-2xl font-bold'>$895.00</h2>
+          <h2 className='text-2xl font-bold'>${Tour2.price}.00</h2>
           <p className='mt-3'>*Price varies</p>
           <span className='flex gap-2'>
             <Img
@@ -72,7 +74,7 @@ export default function TourCards() {
               src={Clock}
               alt=''
             />
-            <p>9 Days to go</p>
+            <p>{Tour2.daysToGo}</p>
           </span>
           <div className='flex justify-between'>
             <span className='flex gap-2'>
@@ -81,7 +83,7 @@ export default function TourCards() {
                 src={Check}
                 alt=''
               />
-              <p>Free cencelation</p>
+              <p>Free cencellation</p>
             </span>
             <span className='flex gap-2'>
               <Img
@@ -89,7 +91,7 @@ export default function TourCards() {
                 src={New}
                 alt=''
               />
-              <p>New on Travo</p>
+              <p>{Tour2.isNew}</p>
             </span>
           </div>
         </div>
@@ -97,14 +99,14 @@ export default function TourCards() {
       <Link className='h-full rounded-md shadow-inner shadow-gray-300' to={'./'}>
         <Img
           className='w-96 h-64 rounded-t-md'
-          src={Tour_3}
+          src={Tour3.image}
           alt=''
         />
         <div className='p-5'>
           <h4 className='text-lg font-semibold'>Waterfall swimming</h4>
-          <p className='text-base opacity-60'>3 days group tour</p>
+          <p className='text-base opacity-60'>{Tour3.duration}</p>
           <p className='mt-3'>From</p>
-          <h2 className='text-2xl font-bold'>$895.00</h2>
+          <h2 className='text-2xl font-bold'>${Tour3.price}.00</h2>
           <p className='mt-3'>*Price varies</p>
           <span className='flex gap-2'>
             <Img
@@ -112,7 +114,7 @@ export default function TourCards() {
               src={Clock}
               alt=''
             />
-            <p>4 Days to go</p>
+            <p>{Tour3.daysToGo}</p>
           </span>
           <div className='flex justify-between'>
             <span className='flex gap-2'>
@@ -121,7 +123,7 @@ export default function TourCards() {
                 src={Check}
                 alt=''
               />
-              <p>Free cencelation</p>
+              <p>Free cencellation</p>
             </span>
             <span className='flex gap-2'>
               <Img
@@ -129,7 +131,7 @@ export default function TourCards() {
                 src={New}
                 alt=''
               />
-              <p>New on Travo</p>
+              <p>{Tour3.isNew}</p>
             </span>
           </div>
         </div>

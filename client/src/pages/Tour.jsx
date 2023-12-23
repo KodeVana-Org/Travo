@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import NavBar from '../components/navbar';
 import Footer from '../components/footer';
 
-import toursData from '../components/home/tours/data';
+import ToursData from '../assets/js/data_tours.js';
 
 export default function Tour() {
   const { id } = useParams();
-  const tour = toursData.find((tour) => tour.id === parseInt(id));
+  const tour = ToursData.find((tour) => tour.id === parseInt(id));
 
   if (!tour) {
     return <div>Tour not found</div>;

@@ -5,7 +5,7 @@ import RotatingReactangle from '../elements/rotatingReactangle';
 import RotatingSphere from '../elements/rotatingSphere';
 import RotatingTriangle from '../elements/rotatingTriangle';
 
-import hero_banner from '../../assets/hero-banner.png'
+import hero_banner from '../../assets/images/hero-banner.png'
 
 export default function Hero() {
   return (

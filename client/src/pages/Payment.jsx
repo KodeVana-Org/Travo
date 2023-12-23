@@ -1,7 +1,7 @@
 import { useState} from 'react';
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
-import toursData from '../components/home/tours/data';
+import toursData from '../assets/js/data_tours.js';
 // import './styles.css'; // Import your generated Tailwind CSS file
 
 export const Payment = () => {

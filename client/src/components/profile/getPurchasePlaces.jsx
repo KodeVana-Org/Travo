@@ -35,7 +35,7 @@ const Profile = () => {
       try {
         const response = await axios.delete(`http://localhost:6969/api/place-delete/${id}`);
         setMessage(response.data.message);
-        toast.success('Place deleted successfully'); // Show success toast
+        toast.success('Place deleted successfully');
         setTimeout(() => {
           window.location.reload('/me'); // Refresh the page after a short delay
         }, 1500);
