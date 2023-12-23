@@ -13,10 +13,6 @@ body {
   font-family: var(--ff-heebo);
 }
 
-h1 {
-  font-family: var(--ff-abril-fatface);
-}
-
 h3 {
   font-family: var(--ff-comforter-brush);
 }

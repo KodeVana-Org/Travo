@@ -1,6 +1,8 @@
-import { BrowserRouter as Router, Route, Routes, Navigate, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './App.css'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 // Your components
@@ -34,8 +36,8 @@ function App() {
 
   return (
     <Router>
+      <ToastContainer />
       <Routes>
-
         {/* public routes */}
         <Route path="/" element={<Home />} />
 
