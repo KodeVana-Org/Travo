@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
-import tours from "../home/tours/data"
+import ToursData from "../../assets/js/data_tours.js"
 
 export default function Tours() {
   return (
     <div className="mx-96 my-16">
       <h1 className="text-3xl font-bold mb-5">Variour tours planned for you</h1>
       <div className="w-full flex flex-wrap">
-        {tours.map((tour, index) => (
+        {ToursData.map((tour, index) => (
           <div key={index} className="w-1/3 p-4">
             <div className="bg-white rounded-lg shadow-inner overflow-hidden">
               <img src={tour.image} alt={tour.name} className="w-full h-80 object-cover" />

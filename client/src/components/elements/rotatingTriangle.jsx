@@ -2,7 +2,7 @@ import { Img } from 'react-image';
 
 import '../../styles/rotateImage.css'
 
-import Triagle from '../../assets/shape-2.png'
+import Triagle from '../../assets/images/shape-2.png'
 
 export default function rotatingTriangle() {
   return (

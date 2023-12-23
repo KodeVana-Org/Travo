@@ -2,7 +2,7 @@ import { Img } from 'react-image';
 
 import '../../styles/rotateImage.css'
 
-import Sphere from '../../assets/shape-3.png'
+import Sphere from '../../assets/images/shape-3.png'
 
 export default function RotatingSphere() {
   return (

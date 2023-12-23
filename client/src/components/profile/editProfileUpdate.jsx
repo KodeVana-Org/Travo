@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import FormComponent from './AddProfile'; 
+import FormComponent from './AddProfile'; // Replace this with your form component
 import { Link } from 'react-router-dom';
 
 const ProfileEdit = () => {

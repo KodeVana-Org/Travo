@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Img } from 'react-image'
-import logoSvg from "../assets/draw2.webp"
+import logoSvg from "../assets/images/draw2.webp"
 import { Link, useNavigate } from "react-router-dom";
 import { EyeIcon, EyeOffIcon } from '@heroicons/react/outline';
 import axios from "axios"

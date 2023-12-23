@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { TERipple } from "tw-elements-react";
 import { useNavigate, Link } from "react-router-dom";
-import logoSvg from "../assets/draw2.svg"
+import logoSvg from "../assets/images/draw2.svg"
 import axios from "axios";
 import { EyeIcon, EyeOffIcon } from '@heroicons/react/outline';
 

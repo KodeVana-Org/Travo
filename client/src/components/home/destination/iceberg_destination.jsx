@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom'
 
 import '../../../styles/destination_card.css'
 
-import destination_1 from '../../../assets/iceberg_destination-1.jpg'
-import destination_2 from '../../../assets/iceberg_destination-2.jpg'
-import destination_3 from '../../../assets/iceberg_destination-3.jpg'
-import destination_4 from '../../../assets/iceberg_destination-4.jpg'
-import destination_5 from '../../../assets/iceberg_destination-5.jpg'
-import destination_6 from '../../../assets/iceberg_destination-6.jpg'
+import Destination_Data from '../../../assets/js/data_destinations.js'
 
 export default function Iceberg() {
+  const Destination1 = Destination_Data[19]
+  const Destination2 = Destination_Data[20]
+  const Destination3 = Destination_Data[21]
+  const Destination4 = Destination_Data[22]
+  const Destination5 = Destination_Data[23]
+  const Destination6 = Destination_Data[24]
+  
   return (
     <div className='text-center relative'>
       <div className='mt-16 grid grid-cols-2 gap-7 justify-between'>
@@ -18,69 +20,69 @@ export default function Iceberg() {
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
-              src={destination_1}
+              src={Destination1.image}
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Baffin Island</h3>
-              <h2 className='text-3xl font-bold text-white'>Greenland</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination1.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination1.country}</h2>
             </span>
           </Link>
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
-              src={destination_2}
+              src={Destination2.image}
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Resurrection Bay</h3>
-              <h2 className='text-3xl font-bold text-white'>Alaska</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination2.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination2.country}</h2>
             </span>
           </Link>
         </div>
         <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
           <Img
             className='h-full w-full destination-card-image'
-            src={destination_3}
+            src={Destination3.image}
             alt=''
           />
           <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-            <h3 className='text-2xl text-[#FCC603]'>Reykjavík</h3>
-            <h2 className='text-3xl font-bold text-white'>Iceland</h2>
+            <h3 className='text-2xl text-[#FCC603]'>{Destination3.place}</h3>
+            <h2 className='text-3xl font-bold text-white'>{Destination3.country}</h2>
           </span>
         </Link>
         <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
           <Img
             className='h-full w-full destination-card-image'
-            src={destination_4}
+            src={Destination4.image}
             alt=''
           />
           <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-            <h3 className='text-2xl text-[#FCC603]'>Harbin</h3>
-            <h2 className='text-3xl font-bold text-white'>China</h2>
+            <h3 className='text-2xl text-[#FCC603]'>{Destination4.place}</h3>
+            <h2 className='text-3xl font-bold text-white'>{Destination4.country}</h2>
           </span>
         </Link>
         <div className='grid grid-rows-2 gap-7'>
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
-              src={destination_5}
+              src={Destination5.image}
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Cotswolds</h3>
-              <h2 className='text-3xl font-bold text-white'>England</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination5.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination5.country}</h2>
             </span>
           </Link>
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
-              src={destination_6}
+              src={Destination6.image}
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Lake Minnewanka</h3>
-              <h2 className='text-3xl font-bold text-white'>Canada</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination6.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination6.country}</h2>
             </span>
           </Link>
         </div>

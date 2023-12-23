@@ -24,21 +24,19 @@ function Contact() {
         // navigate('/contact')
         setTimeout(() => {
           window.location.reload('/contact');
-          
+
         }, 1700);
-        
+
       } else {
         console.log("see the response", response);
       }
 
     } catch (error) {
       console.log('Login error : ', error)
-    
-  }
-}
 
-  
-  
+    }
+  }
+
   return (
     <div className="container mx-auto p-8 text-center">
       <h1 className="text-4xl font-extrabold mb-6">Contact Us</h1>
@@ -89,7 +87,7 @@ function Contact() {
                 className="w-96 p-2 border-2 text-[#029D9D] focus:text-black border-[#029D9D] rounded-md outline-none resize-none"
                 placeholder="Write your message here..."
                 onChange={(e) => setMessage(e.target.value)}
-                
+
               ></textarea>
             </div>
             <button
