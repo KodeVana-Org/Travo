@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import FormComponent from './AddProfile'; // Replace this with your form component
+import FormComponent from './AddProfile';
 
 const ProfileEdit = () => {
   const [isEditing, setIsEditing] = useState(false);

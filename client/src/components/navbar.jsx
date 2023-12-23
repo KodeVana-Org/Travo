@@ -31,21 +31,6 @@ export default function NavBar() {
                 Tours
               </li>
             </Link>
-            <Link className="hover:text-[#FCC603]" to={"/"}>
-              <li>
-                E-visa
-              </li>
-            </Link>
-            <Link className="hover:text-[#FCC603]" to={"/"}>
-              <li>
-                Flights
-              </li>
-            </Link>
-            <Link className="hover:text-[#FCC603]" to={"/"}>
-              <li>
-                Hotels
-              </li>
-            </Link>
           </ul>
         </li>
         <Link className="p-3 m-2 group" to={"/blogs"}>
@@ -57,12 +42,6 @@ export default function NavBar() {
         <Link className="p-3 m-2 group" to={"/about"}>
           <li>
             About Us
-            <div className="mt-1 h-0.5 w-4/5 bg-white opacity-0 group-hover:opacity-100 transition-all duration-200"></div>
-          </li>
-        </Link>
-        <Link className="p-3 m-2 group" to={"/"}>
-          <li>
-            FAQ
             <div className="mt-1 h-0.5 w-4/5 bg-white opacity-0 group-hover:opacity-100 transition-all duration-200"></div>
           </li>
         </Link>

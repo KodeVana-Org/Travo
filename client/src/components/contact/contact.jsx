@@ -1,8 +1,44 @@
+import axios from "axios"
+import { useState } from "react"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {useNavigate} from 'react-router-dom';
 
-export default function contact() {
-  const handleSendMessage = (e) => {
+function Contact() {
+  const navigate = useNavigate();
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSendMessage = async (e) => {
     e.preventDefault();
+
+    try {
+      const response = await axios.post('http://localhost:6969/api/contact', { name, email, message, })
+      const responses = await response.data;
+      if (responses) {
+        toast.success('Messege send ho gya ji!', {
+          position: 'top-center',
+          autoClose: 1000,
+        })
+        // navigate('/contact')
+        setTimeout(() => {
+          window.location.reload('/contact');
+          
+        }, 1700);
+        
+      } else {
+        console.log("see the response", response);
+      }
+
+    } catch (error) {
+      console.log('Login error : ', error)
+    
   }
+}
+
+  
   
   return (
     <div className="container mx-auto p-8 text-center">
@@ -25,6 +61,7 @@ export default function contact() {
                 name="name"
                 className="w-96 p-2 border-2 text-[#029D9D] focus:text-black border-[#029D9D] rounded-md outline-none"
                 placeholder="Enter Name"
+                onChange={(e) => setName(e.target.value)}
                 required
               />
             </div>
@@ -38,6 +75,7 @@ export default function contact() {
                 name="email"
                 className="w-96 p-2 border-2 text-[#029D9D] focus:text-black border-[#029D9D] rounded-md outline-none"
                 placeholder="Enter Email"
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
@@ -51,6 +89,8 @@ export default function contact() {
                 rows="4"
                 className="w-96 p-2 border-2 text-[#029D9D] focus:text-black border-[#029D9D] rounded-md outline-none resize-none"
                 placeholder="Write your message here..."
+                onChange={(e) => setMessage(e.target.value)}
+                
               ></textarea>
             </div>
             <button
@@ -71,3 +111,5 @@ export default function contact() {
     </div>
   )
 }
+
+export default Contact

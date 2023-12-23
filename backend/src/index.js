@@ -13,6 +13,7 @@ const me = require('../src/router/getMe')
 const purchasePlaces = require('./router/purchasePlace')
 const deletePlace = require('./router/removePlace')
 const cors = require('cors');
+const { Contact } = require("./router/contact");
 
 app.use(express.json());
 app.use(cors());
@@ -42,6 +43,7 @@ app.use('/api',addProfile);
 app.use('/api', PlaceRouter); 
 app.use('/api',purchasePlaces);
 app.use('/api',deletePlace);
+app.use('/api', Contact);
 
 app.listen(process.env.PORT, (req, res) => {
   console.log(`=> Server is running on port 🌸 << ${process.env.PORT} >> 🌸`)

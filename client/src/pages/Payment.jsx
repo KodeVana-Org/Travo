@@ -1,8 +1,7 @@
 import { useState} from 'react';
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
-import toursData from '../components/home/tours/data';
-// import './styles.css'; // Import your generated Tailwind CSS file
+import ToursData from '../assets/js/data_tours.js';
 
 export const Payment = () => {
   const { id } = useParams();
@@ -13,7 +12,7 @@ export const Payment = () => {
   const [cvc, setCVC] = useState('');
   const [paymentSuccess, setPaymentSuccess] = useState(false);
 
-  const tour = toursData.find((tour) => tour.id === parseInt(id));
+  const tour = ToursData.find((tour) => tour.id === parseInt(id));
   if (!tour) {
     return <div>Tour not found</div>;
   }

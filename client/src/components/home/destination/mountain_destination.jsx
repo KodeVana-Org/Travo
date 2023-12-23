@@ -3,21 +3,23 @@ import { Link } from 'react-router-dom'
 
 import '../../../styles/destination_card.css'
 
-import destination_1 from '../../../assets/mountain_destination-1.jpg'
-import destination_2 from '../../../assets/mountain_destination-2.jpg'
-import destination_3 from '../../../assets/mountain_destination-3.jpg'
-import destination_4 from '../../../assets/mountain_destination-4.jpg'
-import destination_5 from '../../../assets/mountain_destination-5.jpg'
-import destination_6 from '../../../assets/mountain_destination-6.jpg'
+import Destination_Data from '../../../assets/js/data_destinations.js'
 
 export default function Mountain() {
+  const Destination1 = Destination_Data[10]
+  const Destination2 = Destination_Data[5]
+  const Destination3 = Destination_Data[11]
+  const Destination4 = Destination_Data[17]
+  const Destination5 = Destination_Data[16]
+  const Destination6 = Destination_Data[12]
+  
   return (
     <div className='text-center relative'>
       <div className='mt-16 grid grid-cols-2 gap-7 justify-between'>
         <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
           <Img
             className='h-full w-full destination-card-image'
-            src={destination_1}
+            src={Destination1.image}
             alt=''
           />
           <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
@@ -29,7 +31,7 @@ export default function Mountain() {
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
-              src={destination_2}
+              src={Destination2.image}
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
@@ -40,7 +42,7 @@ export default function Mountain() {
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
-              src={destination_3}
+              src={Destination3.image}
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
@@ -53,7 +55,7 @@ export default function Mountain() {
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
-              src={destination_4}
+              src={Destination4.image}
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
@@ -64,7 +66,7 @@ export default function Mountain() {
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
             <Img
               className='h-full w-full destination-card-image'
-              src={destination_5}
+              src={Destination5.image}
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
@@ -76,7 +78,7 @@ export default function Mountain() {
         <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
           <Img
             className='h-full w-full destination-card-image'
-            src={destination_6}
+            src={Destination6.image}
             alt=''
           />
           <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>

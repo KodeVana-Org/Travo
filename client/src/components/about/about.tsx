@@ -1,9 +1,8 @@
-// AboutPage.js
 import React from 'react';
 import { Img } from 'react-image';
 import { Link } from 'react-router-dom';
 
-import About_banner from "../../assets/about-banner.png";
+import About_banner from "../../assets/images/about-banner.png";
 
 export default function About() {
   return (
