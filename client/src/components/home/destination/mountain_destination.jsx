@@ -6,11 +6,11 @@ import '../../../styles/destination_card.css'
 import Destination_Data from '../../../assets/js/data_destinations.js'
 
 export default function Mountain() {
-  const Destination1 = Destination_Data[10]
-  const Destination2 = Destination_Data[5]
-  const Destination3 = Destination_Data[11]
-  const Destination4 = Destination_Data[17]
-  const Destination5 = Destination_Data[16]
+  const Destination1 = Destination_Data[7]
+  const Destination2 = Destination_Data[8]
+  const Destination3 = Destination_Data[9]
+  const Destination4 = Destination_Data[10]
+  const Destination5 = Destination_Data[11]
   const Destination6 = Destination_Data[12]
   
   return (
@@ -23,8 +23,8 @@ export default function Mountain() {
             alt=''
           />
           <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-            <h3 className='text-2xl text-[#FCC603]'>Shillong</h3>
-            <h2 className='text-3xl font-bold text-white'>India</h2>
+            <h3 className='text-2xl text-[#FCC603]'>{Destination1.place}</h3>
+            <h2 className='text-3xl font-bold text-white'>{Destination1.country}</h2>
           </span>
         </Link>
         <div className='grid grid-rows-2 gap-7'>
@@ -35,8 +35,8 @@ export default function Mountain() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Hallstatt</h3>
-              <h2 className='text-3xl font-bold text-white'>Austria</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination2.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination2.country}</h2>
             </span>
           </Link>
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
@@ -46,8 +46,8 @@ export default function Mountain() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Lecco</h3>
-              <h2 className='text-3xl font-bold text-white'>Italy</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination3.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination3.country}</h2>
             </span>
           </Link>
         </div>
@@ -59,8 +59,8 @@ export default function Mountain() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Wengen</h3>
-              <h2 className='text-3xl font-bold text-white'>Switzerland</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination4.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination4.country}</h2>
             </span>
           </Link>
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
@@ -70,8 +70,8 @@ export default function Mountain() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Berchtesgaden</h3>
-              <h2 className='text-3xl font-bold text-white'>Germany</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination5.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination5.country}</h2>
             </span>
           </Link>
         </div>
@@ -82,8 +82,8 @@ export default function Mountain() {
             alt=''
           />
           <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-            <h3 className='text-2xl text-[#FCC603]'>Queenstown</h3>
-            <h2 className='text-3xl font-bold text-white'>New Zealand</h2>
+            <h3 className='text-2xl text-[#FCC603]'>{Destination6.place}</h3>
+            <h2 className='text-3xl font-bold text-white'>{Destination6.country}</h2>
           </span>
         </Link>
       </div>

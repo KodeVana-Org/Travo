@@ -6,12 +6,12 @@ import '../../../styles/destination_card.css'
 import Destination_Data from '../../../assets/js/data_destinations.js'
 
 export default function Waterfall() {
-  const Destination1 = Destination_Data[4]
-  const Destination2 = Destination_Data[15]
-  const Destination3 = Destination_Data[21]
-  const Destination4 = Destination_Data[13]
-  const Destination5 = Destination_Data[3]
-  const Destination6 = Destination_Data[1]
+  const Destination1 = Destination_Data[13]
+  const Destination2 = Destination_Data[14]
+  const Destination3 = Destination_Data[15]
+  const Destination4 = Destination_Data[16]
+  const Destination5 = Destination_Data[17]
+  const Destination6 = Destination_Data[18]
   
   return (
     <div className='text-center relative'>
@@ -23,8 +23,8 @@ export default function Waterfall() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Angel Falls</h3>
-              <h2 className='text-3xl font-bold text-white'>Venezuela</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination1.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination1.country}</h2>
             </span>
           </Link>
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
@@ -34,8 +34,8 @@ export default function Waterfall() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Victoria Falls</h3>
-              <h2 className='text-3xl font-bold text-white'>Zambia</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination2.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination2.country}</h2>
             </span>
           </Link>
         </div>
@@ -47,8 +47,8 @@ export default function Waterfall() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Niagara Falls</h3>
-              <h2 className='text-3xl font-bold text-white'>US</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination3.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination3.country}</h2>
             </span>
           </Link>
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
@@ -58,8 +58,8 @@ export default function Waterfall() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Iguazu Falls</h3>
-              <h2 className='text-3xl font-bold text-white'>Argentina</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination4.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination4.country}</h2>
             </span>
           </Link>
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
@@ -69,8 +69,8 @@ export default function Waterfall() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Gullfoss</h3>
-              <h2 className='text-3xl font-bold text-white'>Iceland</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination5.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination5.country}</h2>
             </span>
           </Link>
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
@@ -80,8 +80,8 @@ export default function Waterfall() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Tugela Falls</h3>
-              <h2 className='text-3xl font-bold text-white'>South Africa</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination6.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination6.country}</h2>
             </span>
           </Link>
         </div>

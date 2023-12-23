@@ -7,12 +7,12 @@ import Destination_Data from '../../../assets/js/data_destinations.js'
 
 export default function Beach() {
   const Destination1 = Destination_Data[0]
-  const Destination2 = Destination_Data[9]
-  const Destination3 = Destination_Data[20]
-  const Destination4 = Destination_Data[6]
-  const Destination5 = Destination_Data[14]
-  const Destination6 = Destination_Data[8]
-  const Destination7 = Destination_Data[23]
+  const Destination2 = Destination_Data[1]
+  const Destination3 = Destination_Data[2]
+  const Destination4 = Destination_Data[3]
+  const Destination5 = Destination_Data[4]
+  const Destination6 = Destination_Data[5]
+  const Destination7 = Destination_Data[6]
   
   return (
     <div className='text-center relative'>
@@ -24,8 +24,8 @@ export default function Beach() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Male</h3>
-              <h2 className='text-3xl font-bold text-white'>Maldives</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination1.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination1.country}</h2>
             </span>
           </Link>
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
@@ -35,8 +35,8 @@ export default function Beach() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Bangkok</h3>
-              <h2 className='text-3xl font-bold text-white'>Thailand</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination2.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination2.country}</h2>
             </span>
           </Link>
         </div>
@@ -48,8 +48,8 @@ export default function Beach() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Kuala Lumpur</h3>
-              <h2 className='text-3xl font-bold text-white'>Malaysia</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination3.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination3.country}</h2>
             </span>
           </Link>
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
@@ -59,8 +59,8 @@ export default function Beach() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Kathmandu</h3>
-              <h2 className='text-3xl font-bold text-white'>Nepal</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination4.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination4.place}</h2>
             </span>
           </Link>
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
@@ -70,8 +70,8 @@ export default function Beach() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Goa</h3>
-              <h2 className='text-3xl font-bold text-white'>India</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination5.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination5.country}</h2>
             </span>
           </Link>
         </div>
@@ -83,8 +83,8 @@ export default function Beach() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Lakshadweep</h3>
-              <h2 className='text-3xl font-bold text-white'>Islands</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination6.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination6.country}</h2>
             </span>
           </Link>
           <Link className='relative overflow-hidden destination-card rounded-md' to={'/destinations'}>
@@ -94,8 +94,8 @@ export default function Beach() {
               alt=''
             />
             <span className='p-10 w-full text-left absolute bottom-0 left-0 z-10'>
-              <h3 className='text-2xl text-[#FCC603]'>Alibaug</h3>
-              <h2 className='text-3xl font-bold text-white'>Maharashtra</h2>
+              <h3 className='text-2xl text-[#FCC603]'>{Destination7.place}</h3>
+              <h2 className='text-3xl font-bold text-white'>{Destination7.country}</h2>
             </span>
           </Link>
         </div>

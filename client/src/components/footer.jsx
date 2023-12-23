@@ -70,16 +70,16 @@ export default function Footer() {
               <h2 className="mb-7 text-2xl font-semibold">Quick links</h2>
             </li>
             <li className="mb-1">
-              <Link to={'/destinations'}>About</Link>
+              <Link to={'/about'}>About</Link>
             </li>
             <li className="mb-1">
-              <Link to={'/tours'}>Contact</Link>
+              <Link to={'/contact'}>Contact</Link>
             </li>
             <li className="mb-1">
-              <Link to={'/e_visa'}>Tour</Link>
+              <Link to={'/tours'}>Tour</Link>
             </li>
             <li className="mb-1">
-              <Link to={'/bookings'}>Bookings</Link>
+              <Link to={'/me'}>Bookings</Link>
             </li>
             <li className="mb-1">
               <Link to={'/tnc'}>Terms & Conditions</Link>
@@ -105,7 +105,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <Link to={'/'} className="text-4xl font-extrabold">Tourest</Link>
+          <Link to={'/'} className="text-4xl font-extrabold">Travo</Link>
           <p>
             &copy; 2023 <Link to={'https://kodevana.com'}>KodeVana</Link>. All Rights Reserved
           </p>

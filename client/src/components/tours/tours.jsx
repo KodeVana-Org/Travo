@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import ToursData from '../../assets/js/data_tours.js'
+import ToursData from "../../assets/js/data_tours.js"
 
 export default function Tours() {
   return (
