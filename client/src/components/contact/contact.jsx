@@ -49,7 +49,7 @@ export default function contact() {
                 id="message"
                 name="message"
                 rows="4"
-                className="w-96 p-2 border-2 text-[#029D9D] focus:text-black border-[#029D9D] rounded-md outline-none"
+                className="w-96 p-2 border-2 text-[#029D9D] focus:text-black border-[#029D9D] rounded-md outline-none resize-none"
                 placeholder="Write your message here..."
               ></textarea>
             </div>
