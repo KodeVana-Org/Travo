@@ -4,7 +4,9 @@ import './App.css'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
+import GetPlace from './components/newArrival/getPlaces.jsx'
+import SinglePlace from './components/newArrival/singlePlace.jsx';
+import AddPlace from './pages/newArrival.jsx'
 // Your components
 import Home from './pages/Home.jsx';
 import About from './pages/About_us.jsx';
@@ -42,6 +44,7 @@ function App() {
         <Route path="/" element={<Home />} />
 
         <Route path="/about" element={<About />} />
+        <Route path="/places" element={<GetPlace />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/tours" element={<Tours />} />
         <Route path="/destinations" element={<Destinations />} />
@@ -53,6 +56,8 @@ function App() {
           <>
             <Route path="/me" element={<Profile />} />
             <Route path="/payment/:id" element={<Payment />} />
+            <Route path='/add-new-place' element={<AddPlace />} />
+            <Route path="/places/:id" element ={ <SinglePlace />} />
           </>
         ) : (
           <Route path="/me" element={<Navigate to="/" />} />

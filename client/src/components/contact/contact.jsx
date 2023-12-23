@@ -2,10 +2,9 @@ import axios from "axios"
 import { useState } from "react"
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom';
+
 
 function Contact() {
-  const navigate = useNavigate();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

@@ -1,6 +1,8 @@
 const Contact = require('../models/contact');
+const express = require('express');
+const router = express.Router();
 
-exports.Contact = async (req, res) => {
+router.post('/contact', async (req, res) => {
     try {
         const { name, email, message } = req.body;
     
@@ -19,4 +21,6 @@ exports.Contact = async (req, res) => {
         res.status(500).json({ message: 'Error saving contact', error: error.message });
       }
     ;
-}
+})
+
+module.exports = router
