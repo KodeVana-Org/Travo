@@ -1,5 +1,5 @@
 import Footer from "../components/footer"
-import GetPlace from '../components/newArrival/getPlaces'
+import GetPlace from '../components/newArrival/getPlaceWtihDelete'
 import AddPlace from '../components/newArrival/addPlaces'
 
 function NewArrival() {

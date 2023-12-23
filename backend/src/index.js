@@ -18,7 +18,7 @@ const purchasePlaces = require('./router/purchasePlace')
 const deletePlace = require('./router/removePlace')
 const cloudinary = require('./config/cloudinary');
 const cors = require('cors');
-const { Contact } = require("./router/contact");
+const  Contact  = require("./router/contact");
 app.use(express.json());
 app.use(cors());
 async function someFunction() {
